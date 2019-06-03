@@ -4,17 +4,16 @@ services:
 before_install:
   - docker build -t anandahlawat/docker-react -f Dockerfile.dev .
 script:
-  - docker run anandahlawat/docker-react npm run test -- --coverage
+  - echo "no tests!"
 
 deploy:
   provider: elasticbeanstalk
-  region: "ap-southeast-1"
-  app: "docker-madfocus"
-  env: "MadfocusDocker-env"
-  bucket_name: "elasticbeanstalk-ap-southeast-1-071421208465"
-  bucket_path: "docker-madfocus"
-  on:
-    branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
+  region: "ap-southeast-1"
+  app: "docker-madfocus"
+  env: "MadfocusDocker-env"
+  bucket_name: "docker-madfocus"
+  on:
+    branch: master
