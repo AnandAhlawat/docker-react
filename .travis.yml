@@ -8,10 +8,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "shipcover-test-ebs"
-  env: "GipDocker-env"
-  bucket_name: "elasticbeanstalk-us-east-1-062083322925"
-  bucker_path: "gip-docker"
+  app: "madfocus-docker"
+  env: "MadfocusDocker-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-071421208465"
+  bucket_path: "madfocus-docker"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
