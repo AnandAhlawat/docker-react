@@ -8,7 +8,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "gip-docker"
+  app: "shipcover-test-ebs"
   env: "GipDocker-env"
   bucket_name: "elasticbeanstalk-us-east-1-062083322925"
   bucker_path: "gip-docker"
