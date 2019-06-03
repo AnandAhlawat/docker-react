@@ -4,6 +4,9 @@ services:
 before_install:
   - docker build -t anandahlawat/docker-react -f Dockerfile.dev .
   - gem install bundler
+
+script: 'bundle exec rake spec'
+
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-1"
