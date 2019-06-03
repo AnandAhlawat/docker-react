@@ -13,7 +13,7 @@ deploy:
     secure: "$AWS_SECRET_KEY"
   region: "ap-southeast-1"
   app: "docker-madfocus"
-  env: "MadfocusDocker-env"
+  env: "DockerMadfocus-env"
   bucket_name: "docker-madfocus"
   on:
     branch: master
