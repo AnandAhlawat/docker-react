@@ -8,12 +8,12 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-1"
-  app: "madfocus-docker"
+  app: "docker-madfocus"
   env: "MadfocusDocker-env"
   bucket_name: "elasticbeanstalk-ap-southeast-1-071421208465"
-  bucket_path: "madfocus-docker"
+  bucket_path: "docker-madfocus"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:  
+  secret_access_key:
     secure: "$AWS_SECRET_KEY"
